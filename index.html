@@ -176,59 +176,133 @@
 </section>
 
     <!-- Color Variants -->
-<section class="bg-rose-50 py-16">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-12 text-rose-500">Pilihan Warna</h2>
+<section class="py-6">
+  <div class="container mx-auto flex flex-col items-center justify-center text-center">
+    <h2 class="text-xl font-bold mb-4 text-gray-800">Pilih Varian Warna</h2>
 
-    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 justify-items-center">
-      <!-- Contoh warna -->
-      <div class="flex flex-col items-center space-y-2">
-        <div class="w-12 h-12 rounded-full bg-blue-900 border border-gray-300"></div>
-        <span class="text-sm text-gray-700">Navy</span>
-      </div>
-      <div class="flex flex-col items-center space-y-2">
-        <div class="w-12 h-12 rounded-full bg-gray-300 border border-gray-400"></div>
-        <span class="text-sm text-gray-700">Silver</span>
-      </div>
-      <div class="flex flex-col items-center space-y-2">
-        <div class="w-12 h-12 rounded-full bg-black border border-gray-300"></div>
-        <span class="text-sm text-gray-700">Hitam</span>
-      </div>
-      <div class="flex flex-col items-center space-y-2">
-        <div class="w-12 h-12 rounded-full bg-[#C3B091] border border-gray-300"></div>
-        <span class="text-sm text-gray-700">Khaki</span>
-      </div>
-      <div class="flex flex-col items-center space-y-2">
-        <div class="w-12 h-12 rounded-full bg-[#7B4B3A] border border-gray-300"></div>
-        <span class="text-sm text-gray-700">Coffee</span>
-      </div>
-      <div class="flex flex-col items-center space-y-2">
-        <div class="w-12 h-12 rounded-full bg-[#B2AC88] border border-gray-300"></div>
-        <span class="text-sm text-gray-700">Sage</span>
-      </div>
-      <div class="flex flex-col items-center space-y-2">
-        <div class="w-12 h-12 rounded-full bg-pink-300 border border-gray-300"></div>
-        <span class="text-sm text-gray-700">Wardah Pink</span>
-      </div>
-      <div class="flex flex-col items-center space-y-2">
-        <div class="w-12 h-12 rounded-full bg-gray-500 border border-gray-300"></div>
-        <span class="text-sm text-gray-700">Dusty Grey</span>
-      </div>
-      <div class="flex flex-col items-center space-y-2">
-        <div class="w-12 h-12 rounded-full bg-[#D2B48C] border border-gray-300"></div>
-        <span class="text-sm text-gray-700">Latte</span>
-      </div>
-      <div class="flex flex-col items-center space-y-2">
-        <div class="w-12 h-12 rounded-full bg-red-800 border border-gray-300"></div>
-        <span class="text-sm text-gray-700">Maroon</span>
-      </div>
-      <div class="flex flex-col items-center space-y-2">
-        <div class="w-12 h-12 rounded-full bg-[#F5F5DC] border border-gray-300"></div>
-        <span class="text-sm text-gray-700">Natural</span>
-      </div>
+    <div id="warna-group" class="flex gap-4 flex-wrap justify-center">
+      <!-- Navy -->
+      <button type="button" data-warna="navy"
+        class="group relative flex items-center gap-3 rounded-2xl border border-gray-300 px-4 py-3 transition
+               hover:border-gray-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500">
+        <span class="inline-block h-8 w-8 rounded-full bg-[#001F3F] border border-gray-200"></span>
+        <span class="text-sm font-medium text-gray-800">Navy</span>
+        <span class="pointer-events-none absolute inset-0 rounded-2xl ring-0 group-[.active]:ring-2 group-[.active]:ring-pink-500"></span>
+      </button>
+
+      <!-- Silver -->
+      <button type="button" data-warna="silver"
+        class="group relative flex items-center gap-3 rounded-2xl border border-gray-300 px-4 py-3 transition
+               hover:border-gray-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500">
+        <span class="inline-block h-8 w-8 rounded-full bg-[#C0C0C0] border border-gray-200"></span>
+        <span class="text-sm font-medium text-gray-800">Silver</span>
+        <span class="pointer-events-none absolute inset-0 rounded-2xl ring-0 group-[.active]:ring-2 group-[.active]:ring-pink-500"></span>
+      </button>
+
+      <!-- Hitam -->
+      <button type="button" data-warna="hitam"
+        class="group relative flex items-center gap-3 rounded-2xl border border-gray-300 px-4 py-3 transition
+               hover:border-gray-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500">
+        <span class="inline-block h-8 w-8 rounded-full bg-black border border-gray-200"></span>
+        <span class="text-sm font-medium text-gray-800">Hitam</span>
+        <span class="pointer-events-none absolute inset-0 rounded-2xl ring-0 group-[.active]:ring-2 group-[.active]:ring-pink-500"></span>
+      </button>
+
+      <!-- Khaki -->
+      <button type="button" data-warna="khaki"
+        class="group relative flex items-center gap-3 rounded-2xl border border-gray-300 px-4 py-3 transition
+               hover:border-gray-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500">
+        <span class="inline-block h-8 w-8 rounded-full bg-[#C3B091] border border-gray-200"></span>
+        <span class="text-sm font-medium text-gray-800">Khaki</span>
+        <span class="pointer-events-none absolute inset-0 rounded-2xl ring-0 group-[.active]:ring-2 group-[.active]:ring-pink-500"></span>
+      </button>
+
+      <!-- Coffe -->
+      <button type="button" data-warna="coffe"
+        class="group relative flex items-center gap-3 rounded-2xl border border-gray-300 px-4 py-3 transition
+               hover:border-gray-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500">
+        <span class="inline-block h-8 w-8 rounded-full bg-[#6F4E37] border border-gray-200"></span>
+        <span class="text-sm font-medium text-gray-800">Coffe</span>
+        <span class="pointer-events-none absolute inset-0 rounded-2xl ring-0 group-[.active]:ring-2 group-[.active]:ring-pink-500"></span>
+      </button>
+
+      <!-- Sage -->
+      <button type="button" data-warna="sage"
+        class="group relative flex items-center gap-3 rounded-2xl border border-gray-300 px-4 py-3 transition
+               hover:border-gray-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500">
+        <span class="inline-block h-8 w-8 rounded-full bg-[#B2AC88] border border-gray-200"></span>
+        <span class="text-sm font-medium text-gray-800">Sage</span>
+        <span class="pointer-events-none absolute inset-0 rounded-2xl ring-0 group-[.active]:ring-2 group-[.active]:ring-pink-500"></span>
+      </button>
+
+      <!-- Wardah Pink -->
+      <button type="button" data-warna="wardah-pink"
+        class="group relative flex items-center gap-3 rounded-2xl border border-gray-300 px-4 py-3 transition
+               hover:border-gray-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500">
+        <span class="inline-block h-8 w-8 rounded-full bg-[#F8BBD0] border border-gray-200"></span>
+        <span class="text-sm font-medium text-gray-800">Wardah Pink</span>
+        <span class="pointer-events-none absolute inset-0 rounded-2xl ring-0 group-[.active]:ring-2 group-[.active]:ring-pink-500"></span>
+      </button>
+
+      <!-- Desty Grey -->
+      <button type="button" data-warna="desty-grey"
+        class="group relative flex items-center gap-3 rounded-2xl border border-gray-300 px-4 py-3 transition
+               hover:border-gray-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500">
+        <span class="inline-block h-8 w-8 rounded-full bg-[#A9A9A9] border border-gray-200"></span>
+        <span class="text-sm font-medium text-gray-800">Desty Grey</span>
+        <span class="pointer-events-none absolute inset-0 rounded-2xl ring-0 group-[.active]:ring-2 group-[.active]:ring-pink-500"></span>
+      </button>
+
+      <!-- Latte -->
+      <button type="button" data-warna="latte"
+        class="group relative flex items-center gap-3 rounded-2xl border border-gray-300 px-4 py-3 transition
+               hover:border-gray-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500">
+        <span class="inline-block h-8 w-8 rounded-full bg-[#E7C9A9] border border-gray-200"></span>
+        <span class="text-sm font-medium text-gray-800">Latte</span>
+        <span class="pointer-events-none absolute inset-0 rounded-2xl ring-0 group-[.active]:ring-2 group-[.active]:ring-pink-500"></span>
+      </button>
+
+      <!-- Maroon -->
+      <button type="button" data-warna="maroon"
+        class="group relative flex items-center gap-3 rounded-2xl border border-gray-300 px-4 py-3 transition
+               hover:border-gray-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500">
+        <span class="inline-block h-8 w-8 rounded-full bg-[#800000] border border-gray-200"></span>
+        <span class="text-sm font-medium text-gray-800">Maroon</span>
+        <span class="pointer-events-none absolute inset-0 rounded-2xl ring-0 group-[.active]:ring-2 group-[.active]:ring-pink-500"></span>
+      </button>
+
+      <!-- Natural -->
+      <button type="button" data-warna="natural"
+        class="group relative flex items-center gap-3 rounded-2xl border border-gray-300 px-4 py-3 transition
+               hover:border-gray-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500">
+        <span class="inline-block h-8 w-8 rounded-full bg-[#F5F5DC] border border-gray-200"></span>
+        <span class="text-sm font-medium text-gray-800">Natural</span>
+        <span class="pointer-events-none absolute inset-0 rounded-2xl ring-0 group-[.active]:ring-2 group-[.active]:ring-pink-500"></span>
+      </button>
     </div>
+
+    <!-- Teks pilihan aktif -->
+    <p id="warna-terpilih" class="mt-4 text-sm text-gray-600">
+      Pilihan: <span class="font-semibold">Belum dipilih</span>
+    </p>
   </div>
 </section>
+
+<script>
+  const group = document.getElementById('warna-group');
+  const info = document.getElementById('warna-terpilih').querySelector('span');
+
+  group.addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-warna]');
+    if (!btn) return;
+
+    group.querySelectorAll('button[data-warna]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const label = btn.querySelector('span:nth-child(2)')?.textContent?.trim() || '';
+    info.textContent = label || 'Belum dipilih';
+  });
+</script>
 
     <!-- Testimonials -->
     <section class="py-16">
